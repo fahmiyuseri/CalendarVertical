@@ -122,11 +122,17 @@ import java.util.*;
             TextView eventIndicator = (TextView)view.findViewById(R.id.event_id);
 
             Calendar eventCalendar = Calendar.getInstance();
+
             if(allEvents!=null) {
                 for (int i = 0; i < allEvents.size(); i++) {
                     eventCalendar.setTime(allEvents.get(i).getDate());
                     if (dayValue == eventCalendar.get(Calendar.DAY_OF_MONTH) && displayMonth == eventCalendar.get(Calendar.MONTH) + 1
                             && displayYear == eventCalendar.get(Calendar.YEAR)) {
+                        if(allEvents.get(i).getColorEvent()!=null){
+                            holder.event_id.setTextColor(Color.parseColor(allEvents.get(i).getColorEvent()));
+
+                        }
+
                         eventIndicator.setText(allEvents.get(i).getMessage());
 
                     }

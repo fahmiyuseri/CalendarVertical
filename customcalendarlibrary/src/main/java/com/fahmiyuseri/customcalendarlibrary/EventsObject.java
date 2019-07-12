@@ -4,9 +4,11 @@ public class EventsObject {
     private int id;
     private String message;
     private Date date;
+    private String colorEvent;
     public EventsObject(String message, Date date) {
         this.message = message;
         this.date = date;
+
     }
     public EventsObject(int id, String message, Date date) {
         this.date = date;
@@ -21,5 +23,13 @@ public class EventsObject {
     }
     public Date getDate() {
         return date;
+    }
+
+    public String getColorEvent() {
+        return colorEvent;
+    }
+
+    public void setColorEvent(String colorEvent) {
+        this.colorEvent = colorEvent;
     }
 }
