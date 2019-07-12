@@ -89,6 +89,7 @@ import java.util.*;
 
                 if(sDeparture.equals(sCurDate)){
                     cellNumber.setTextColor(Color.parseColor("#FFFFFF"));
+                    holder.event_id.setTextColor(Color.parseColor("#FFFFFF"));
                     view.setBackground(context.getResources().getDrawable(R.drawable.oval));
 
                 }
@@ -100,12 +101,16 @@ import java.util.*;
                 if(dateCal.getTime().after(Departure.getTime())&&dateCal.getTime().before(Return.getTime())){
                     view.setBackgroundColor(Color.parseColor("#FF63AD67"));
                     cellNumber.setTextColor(Color.parseColor("#FFFFFF"));
+                    holder.event_id.setTextColor(Color.parseColor("#FFFFFF"));
+
 
 
                 }
                 if(sReturn.equals(sCurDate)){
                     view.setBackground(context.getResources().getDrawable(R.drawable.oval));
                     cellNumber.setTextColor(Color.parseColor("#FFFFFF"));
+                    holder.event_id.setTextColor(Color.parseColor("#FFFFFF"));
+
 
 
 
