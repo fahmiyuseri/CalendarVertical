@@ -10,6 +10,13 @@ public class EventsObject {
         this.date = date;
 
     }
+
+    public EventsObject(String message, Date date, String colorEvent) {
+        this.message = message;
+        this.date = date;
+        this.colorEvent = colorEvent;
+    }
+
     public EventsObject(int id, String message, Date date) {
         this.date = date;
         this.message = message;
