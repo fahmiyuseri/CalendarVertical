@@ -127,6 +127,15 @@ import java.util.*;
 
                 }
 
+                if(Departure.equals(Return)){if(sDeparture.equals(sCurDate)){
+                    cellNumber.setTextColor(Color.parseColor("#FFFFFF"));
+                    holder.event_id.setTextColor(Color.parseColor("#FFFFFF"));
+                    holder.ivbg.setImageDrawable(context.getResources().getDrawable(R.drawable.oval));
+
+                }
+
+                }
+
             }
 
             //Add events to the calendar
