@@ -44,8 +44,14 @@ public class CalendarAdapter extends RecyclerView.Adapter<CalendarAdapter.MyView
                  Return = calendar;
 
                  //gridAdapter.setSelected(Departure, Return);
-                 notifyDataSetChanged();
-                 adapterInterface.daySelect(Departure,Return);
+                 if(Return.getTime().after(Departure.getTime())) {
+                     notifyDataSetChanged();
+                     adapterInterface.daySelect(Departure, Return);
+                 } if( Return.getTime().equals(Departure.getTime())) {
+                     notifyDataSetChanged();
+                     adapterInterface.daySelect(Departure, Return);
+                 }
+
 
              }
        //  }
