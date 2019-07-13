@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -36,11 +37,13 @@ import java.util.*;
         public class MyViewHolder extends RecyclerView.ViewHolder {
         public TextView calendar_date_id;
         public TextView event_id;
+        public ImageView ivbg;
 
         public MyViewHolder(View view) {
             super(view);
             calendar_date_id = (TextView) view.findViewById(R.id.calendar_date_id);
             event_id = (TextView) view.findViewById(R.id.event_id);
+            ivbg = (ImageView) view.findViewById(R.id.ivbg);
         }
     }
 
@@ -90,7 +93,7 @@ import java.util.*;
                 if(sDeparture.equals(sCurDate)){
                     cellNumber.setTextColor(Color.parseColor("#FFFFFF"));
                     holder.event_id.setTextColor(Color.parseColor("#FFFFFF"));
-                    view.setBackground(context.getResources().getDrawable(R.drawable.oval));
+                    holder.ivbg.setImageDrawable(context.getResources().getDrawable(R.drawable.oval));
 
                 }
 
@@ -107,12 +110,20 @@ import java.util.*;
 
                 }
                 if(sReturn.equals(sCurDate)){
-                    view.setBackground(context.getResources().getDrawable(R.drawable.oval));
+                    holder.ivbg.setImageDrawable(context.getResources().getDrawable(R.drawable.ovalreturn));
                     cellNumber.setTextColor(Color.parseColor("#FFFFFF"));
                     holder.event_id.setTextColor(Color.parseColor("#FFFFFF"));
 
 
 
+
+                }
+                String sDeparture = formatter.format(Departure.getTime());
+
+                if(sDeparture.equals(sCurDate)){
+                    cellNumber.setTextColor(Color.parseColor("#FFFFFF"));
+                    holder.event_id.setTextColor(Color.parseColor("#FFFFFF"));
+                    holder.ivbg.setImageDrawable(context.getResources().getDrawable(R.drawable.ovaldepart));
 
                 }
 

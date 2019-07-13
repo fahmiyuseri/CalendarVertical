@@ -1,21 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:padding="8dp">
-    <TextView
-            android:id="@+id/calendar_date_id"
-            android:layout_width="wrap_content"
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+            android:id="@+id/ivbg"
+            android:scaleType="fitXY"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+
+    />
+    <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:text="@string/last_date"/>
-    <TextView
-            android:id="@+id/event_id"
-            android:layout_gravity="center"
-            android:textSize="8sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-</LinearLayout>
+            android:orientation="vertical"
+            android:clipToPadding="true"
+            android:padding="8dp">
+        <TextView
+                android:id="@+id/calendar_date_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="@string/last_date"/>
+        <TextView
+                android:id="@+id/event_id"
+                android:layout_gravity="center"
+                android:textSize="8sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+</RelativeLayout>
